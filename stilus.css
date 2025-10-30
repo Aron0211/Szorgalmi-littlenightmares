@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    background-color: rgb(70, 66, 66);
+
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "h h h"
+        "a a a"
+        "f f f";
+    grid-gap: 20px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+header {
+    grid-area: h;
+
+}
+
+header h1 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: rgb(182, 174, 174);
+}
+
+header img {
+    width: 2000px;
+    height: auto;
+    border-radius: 15px;;
+}
+
+
+article {
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+section{
+    margin: 10px;
+    background-color: rgb(128, 121, 121);
+    border-radius: 2px;
+
+}
+
+
+
+section img{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+section img:hover{
+    transform: scale(1.05);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.776);
+}
+
+section h2{
+
+    font-family: 'Outfit', cursive;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+section p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+footer {
+    grid-area: f;
+    font-family: "Outfit", sans-serif;
+    background-color: rgb(128, 121, 121);
+
+}   
+
+@media screen and (max-width: 768px) {
+
+    body {
+        grid-template-columns: 1fr;
+
+        grid-template-areas: 
+            "h" 
+            "a"
+            "f"; 
+        
+        
+        width: 95%;
+        padding: 10px;
+    }
+    
+
+    nav a {
+        display: grid; 
+        margin: 5px 0;
+    }
+    
+    
+    nav a {
+        margin: 5px 0;
+    }
+    
+   
+    article, footer {
+        margin: 10px 0;
+    }
+
+    section{
+        display: grid ;
+        grid-template-columns: 1fr;
+    }
+}
