@@ -95,39 +95,20 @@ footer {
 
 }   
 
-@media screen and (max-width: 768px) {
+/* Tablet */
+@media (max-width: 900px) {
+    article {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-    body {
+/* Mobil */
+@media (max-width: 600px) {
+    article {
         grid-template-columns: 1fr;
-
-        grid-template-areas: 
-            "h" 
-            "a"
-            "f"; 
-        
-        
-        width: 95%;
-        padding: 10px;
-    }
-    
-
-    nav a {
-        display: grid; 
-        margin: 5px 0;
-    }
-    
-    
-    nav a {
-        margin: 5px 0;
-    }
-    
-   
-    article, footer {
-        margin: 10px 0;
     }
 
-    section{
-        display: grid ;
-        grid-template-columns: 1fr;
+    section img {
+        max-width: 200px;
     }
 }
